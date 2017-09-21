@@ -1,0 +1,36 @@
+.main-nav{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica';
+    color: black;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  p{
+    margin:3px;
+  }
+}
+
+.footer-nav{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica';
+    color: black;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  p{
+    margin:3px;
+  }
+}

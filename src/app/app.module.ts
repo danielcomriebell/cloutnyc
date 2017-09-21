@@ -6,8 +6,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ApplyComponent } from './apply/apply.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 import { AboutComponent } from './about/about.component';
+import { MenuComponent } from './menu/menu.component';
+import { ContactComponent } from './contact/contact.component';
+import { LogoComponent } from './logo/logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -16,7 +20,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     ApplyComponent,
-    PageNotFoundComponent
+    MenuComponent,
+    ContactComponent,
+    LogoComponent,
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +35,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: 'home', component: HomeComponent},
       {path: 'about', component: AboutComponent},
       {path: 'apply', component: ApplyComponent},
+      {path: 'contact', component: ContactComponent},
+      {path: 'terms', component: TermsComponent},
+      {path: 'privacy', component: PrivacyComponent},
       {path: '', redirectTo:'home', pathMatch:'full'},
-      {path: '**', component:PageNotFoundComponent}
+      {path: '**', component:HomeComponent}
     ])
   ],
   providers: [],

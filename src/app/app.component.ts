@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animation, keyframes } from '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { animation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations:[
-    trigger('myAwesomeAnimation',[
-      state('small')
-    ]),
-  ]
+  styleUrls: ['./app.component.scss'],
+  animations:[animation]
 })
 export class AppComponent {
-  title = 'app works!';
+  state: string = 'small'
+  animateMe(){
+    this.state=(this.state === 'small' ? 'large' : 'small');
+  }
 }

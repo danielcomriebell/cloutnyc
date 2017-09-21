@@ -1,0 +1,15 @@
+.logo{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  height: 62px;
+  width: 446px;
+  transform: translate(-50%,-50%);
+  h1{
+    font-family: Reservation;
+    letter-spacing: 35px;
+    font-size: 50px;
+    margin: 0;
+    // font-weight: 0;
+  }
+}
