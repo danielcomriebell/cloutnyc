@@ -1,0 +1,34 @@
+.begin-text{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+  -webkit-animation: example 2s; /* Safari 4.0 - 8.0 */
+
+  animation: example 2s;
+
+  h1{
+    font-family: Reservation;
+
+  }
+}
+
+.end-text{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%);
+  -webkit-animation: example 2s; /* Safari 4.0 - 8.0 */
+
+  animation: example 2s;
+
+  h1{
+    font-family: Reservation;
+  }
+}
+
+
+@-webkit-keyframes example {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}

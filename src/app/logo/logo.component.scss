@@ -6,6 +6,8 @@
   width: 446px;
   transform: translate(-50%,-50%);
   z-index: 9999;
+  -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
+  animation: example .1s 10;
   h1{
     font-family: Reservation;
     letter-spacing: 35px;
@@ -13,4 +15,10 @@
     margin: 0;
     // font-weight: 0;
   }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
