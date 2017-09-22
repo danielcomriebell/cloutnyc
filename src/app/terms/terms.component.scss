@@ -1,0 +1,22 @@
+.terms{
+  width: 500px;
+  text-align: justify;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+  -webkit-animation: example 1s; /* Safari 4.0 - 8.0 */
+
+  animation: example 1s;
+
+  p{
+    font-family: helvetica;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+}
+
+
+@-webkit-keyframes example {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}

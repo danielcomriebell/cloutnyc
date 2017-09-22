@@ -3,10 +3,15 @@
 @font-face {
     font-family: Reservation;
     src: url('./assets/reservation_wide_bold-webfont.woff2') format('woff2'), url('./assets/reservation_wide_bold-webfont.woff') format('woff');
-    // , url('/assets/fonts/didot/Didot.otf') format('otf')
 }
-// src/assets/reservation_wide_bold-webfont.woff
-// src/assets/reservation_wide_bold-webfont.woff2
 body{
   margin: 0;
+  // overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+  cursor: crosshair;
 }
