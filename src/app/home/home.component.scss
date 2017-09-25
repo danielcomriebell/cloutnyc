@@ -5,7 +5,7 @@
   height: 100%;
   position: fixed;
   overflow: scroll;
-  background-color: black;
+  // background-color: black;
   // opacity: .75;
   background-image: url('../assets/first-collection/010.jpg');
   // background-repeat: no-repeat;
@@ -14,6 +14,9 @@
   -o-background-size: cover;
   background-size: cover;
   // z-index: -1;
+  @include respond-to(phone){
+    background-image: none;
+  }
 }
 
 @-webkit-keyframes example {
@@ -42,7 +45,6 @@
   &:nth-child(1){
     left: 100%;
     transform: translateX(-100%);
-
   }
 
   &:nth-child(2){
@@ -54,13 +56,6 @@
     left: 0;
     transform: none;
   }
-
-  // &:nth-child(3){
-  //   left: 0;
-  //   transform: none;
-  //   max-width: none;
-  //   width: 100vw;
-  // }
 
   &:nth-child(4){
     left: 0;
@@ -69,10 +64,12 @@
   }
 
   img{
-    // height: 100vh;
     max-width: 500px;
     -webkit-animation: example 1s; /* Safari 4.0 - 8.0 */
     animation: example 1s;
-    // margin-left: 50vw;
+    @include respond-to(phone){
+      max-width: none;
+      width: 100vw;
+    }
   }
 }

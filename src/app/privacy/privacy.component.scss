@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .privacy{
   width: 500px;
   text-align: justify;
@@ -5,9 +7,11 @@
   position: relative;
   transform: translate(-50%);
   -webkit-animation: example 1s; /* Safari 4.0 - 8.0 */
-
   animation: example 1s;
-
+  @include respond-to(phone){
+    width: 350px;
+    top: 100px;
+  }
   p{
     font-family: helvetica;
     font-size: 11px;

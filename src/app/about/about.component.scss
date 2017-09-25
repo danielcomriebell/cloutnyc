@@ -12,7 +12,9 @@
 
   h1{
     font-family: Reservation;
-
+    @include respond-to(phone){
+      font-size: 20px;
+    }
   }
 }
 
@@ -27,6 +29,9 @@
 
   h1{
     font-family: Reservation;
+    @include respond-to(phone){
+      font-size: 20px;
+    }
   }
 }
 
