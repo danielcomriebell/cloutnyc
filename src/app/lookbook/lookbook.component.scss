@@ -29,10 +29,28 @@
     transform: none;
   }
 
-  &:nth-child(3n){
-    left: 50%;
-    transform: translateX(-50%);
+  // &:nth-child(3){
+  //   left: 0;
+  //   transform: none;
+  //   max-width: none;
+  //   width: 100vw;
+  // }
 
+  &:nth-child(3n){
+    left: 0;
+    transform: none;
+    max-width: none;
+    // width: 100vw;
+    img{
+      max-width: none;
+      width: 100vw;
+      // height: 100vh;
+      height: auto;
+    }
+  }
+
+  &:last-child(){
+    margin-bottom: 25px;
   }
 
   img{
