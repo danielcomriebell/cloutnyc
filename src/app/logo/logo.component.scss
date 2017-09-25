@@ -1,3 +1,6 @@
+@import '../../styles/mixins';
+
+
 .logo{
   position: fixed;
   left: 50%;
@@ -5,14 +8,17 @@
   height: 62px;
   width: 446px;
   transform: translate(-50%,-50%);
-  z-index: 9999;
-  -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
-  animation: example .1s 10;
+  // z-index: 999;
+  // -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
+  // animation: example .1s 10;
   h1{
     font-family: Reservation;
     letter-spacing: 35px;
     font-size: 50px;
     margin: 0;
+    @include respond-to(phone){
+      font-size: 30px;
+    }
     // font-weight: 0;
   }
 }

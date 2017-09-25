@@ -1,7 +1,33 @@
-<div class="main-nav">
+<!-- <div class="main-nav">
     <p *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
-</div>
+</div> -->
 
-<div class="footer-nav">
+<!-- <div class="footer-nav">
     <p *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
+</div> -->
+
+
+
+<div class="container" [@slideAnimation]='state'>
+  <div class="main-nav">
+    <ul>
+      <li (click)="animateMe()" *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
+      <li (click)="animateMe(); animateMe2()" *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
+    </ul>
+      <!-- <p (click)="animateMe()" *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
+      <p (click)="animateMe(); animateMe2()" *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p> -->
+
+  </div>
+
+  <!-- <div class="footer-nav">
+      <p *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
+  </div> -->
+
+  <!-- <h1 (click)="animateMe()"> X </h1> -->
+</div>
+<!-- <p [@myAwesomeAnimation]='state' (click)="animateMe()">I will animate</p> -->
+
+
+<div class="menu-button">
+  <h1  (click)="animateMe()"> [ C ] </h1>
 </div>

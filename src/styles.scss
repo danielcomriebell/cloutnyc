@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+// @import 'reset';
+// @import 'fonts';
+// @import 'variables';
+@import './styles/mixins';
+// @import 'general';
 
 @font-face {
     font-family: Reservation;
@@ -7,6 +12,9 @@
 body{
   margin: 0;
   // overflow: hidden;
+  // @include respond-to(phone){
+  //   background-color: black;
+  // }
 }
 ::-webkit-scrollbar {
     display: none;
