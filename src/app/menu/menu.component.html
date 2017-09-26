@@ -1,23 +1,13 @@
-<!-- <div class="main-nav">
-    <p *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
-</div> -->
-
-<!-- <div class="footer-nav">
-    <p *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></p>
-</div> -->
-
-
-
 <div class="container" [@slideAnimation]='state'>
   <div class="main-nav">
     <ul>
-      <li (click)="animateMe()" *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
-      <li (click)="animateMe()" *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
+      <li (click)="initSlide()" *ngFor="let menu of menuElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
+      <li (click)="initSlide()" *ngFor="let menu of footerElement"><a [routerLink]="['/' + menu]">{{menu}}</a></li>
     </ul>
   </div>
 </div>
 
 
 <div class="menu-button">
-  <h1  (click)="animateMe()"> [ C ] </h1>
+  <h1  (click)="initSlide()"> [ C ] </h1>
 </div>

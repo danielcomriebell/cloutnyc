@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
   footerElement:Array<String> = ['terms','privacy'];
   state: string = 'small'
   constructor() {}
-  animateMe(){
+  initSlide(){
     this.state=(this.state === 'small' ? 'large' : 'small');
     // this.state=(this.state === 'norm' ? 'new' : 'norm');
   }

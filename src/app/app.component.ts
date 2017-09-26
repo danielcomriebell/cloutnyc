@@ -9,8 +9,4 @@ import { animation } from './animations';
   animations:[animation]
 })
 export class AppComponent {
-  state: string = 'small'
-  animateMe(){
-    this.state=(this.state === 'small' ? 'large' : 'small');
-  }
 }
