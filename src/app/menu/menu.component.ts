@@ -9,6 +9,7 @@ import { animation } from '../animations';
   animations:[animation]
 })
 export class MenuComponent implements OnInit {
+  isNav:boolean = false;
   menuElement:Array<String> = ['home','about', 'lookbook', 'apply'];
   footerElement:Array<String> = ['terms','privacy'];
   state: string = 'small'
@@ -19,5 +20,9 @@ export class MenuComponent implements OnInit {
   }
   ngOnInit() {
   }
+
+  // navOpen(){
+  //   this.isNav = !this.isNav;
+  // }
 
 }
