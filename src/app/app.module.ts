@@ -14,9 +14,11 @@ import { LookbookComponent } from './lookbook/lookbook.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyComponent } from './apply/apply.component';
 import { NgDraggableModule } from 'angular-draggable';
-// import { AngularFireModule } from 'angularfire2';
-// import { ReactiveFormsModule } from '@angular/forms';
-// import { firebaseConfig } from '../environments/environment';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 
 @NgModule({
@@ -35,8 +37,9 @@ import { NgDraggableModule } from 'angular-draggable';
     BrowserModule,
     JsonpModule,
     FormsModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     HttpModule,
     NgDraggableModule,
     BrowserAnimationsModule,

@@ -1,1 +1,55 @@
 @import '../../styles/mixins';
+
+h1{
+  position: absolute;
+  left: 50%;
+  cursor: crosshair;
+}
+
+.apply-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .9;
+  .close-apply-container{
+    position: fixed;
+    right: 40px;
+    color: white;
+    font-size: 12px;
+    font-family: Reservation;
+    cursor: crosshair;
+  }
+  .apply-form-fields{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    transform: translate(-50%,-50%);
+    input{
+      width: 350px;
+      height: 34px;
+      display: block;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      outline: 0;
+      -webkit-appearance: none;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+    }
+    button{
+      width: 350px;
+      -webkit-appearance: none;
+      border: 1px solid white;
+      color: white;
+      height: 34px;
+      margin-top: 34px;
+      background-color: transparent;
+      outline: 0;
+      letter-spacing: 1px;
+    }
+  }
+}

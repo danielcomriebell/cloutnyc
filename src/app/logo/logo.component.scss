@@ -12,18 +12,8 @@
   -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
   animation: example .1s 10;
   @include respond-to(phone){
-    // font-size: 30px;
-    // letter-spacing: 20px;
-    // width: 100vw;
     width: 265px;
-    // text-align: center;
-    // transform: none;
-    // left: 50%;
-
   }
-  // z-index: 999;
-  // -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
-  // animation: example .1s 10;
   h1{
     font-family: Reservation;
     letter-spacing: 35px;
@@ -32,10 +22,7 @@
     @include respond-to(phone){
       font-size: 30px;
       letter-spacing: 20px;
-      // width: 100vw;
-      // text-align: center;
     }
-    // font-weight: 0;
   }
 }
 

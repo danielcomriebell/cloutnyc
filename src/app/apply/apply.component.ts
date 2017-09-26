@@ -9,10 +9,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./apply.component.scss']
 })
 export class ApplyComponent implements OnInit {
-
+  showApply:boolean=false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showApplyContainer(){
+    this.showApply = !this.showApply;
   }
 
 }
