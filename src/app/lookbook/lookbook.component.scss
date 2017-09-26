@@ -48,9 +48,11 @@
     }
   }
 
-  &:last-child(){
-    margin-bottom: 25px;
+  &:nth-child(8){
+    margin-bottom: 0px;
   }
+
+  // body > app-root > app-lookbook > div:nth-child(8)
 
   img{
     // height: 100vh;

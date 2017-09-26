@@ -7,7 +7,10 @@
   top: 50%;
   height: 62px;
   width: 446px;
+  z-index: -1;
   transform: translate(-50%,-50%);
+  -webkit-animation: example .1s 10; /* Safari 4.0 - 8.0 */
+  animation: example .1s 10;
   @include respond-to(phone){
     // font-size: 30px;
     // letter-spacing: 20px;
