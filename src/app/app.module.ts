@@ -5,6 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { AboutComponent } from './about/about.component';
@@ -18,7 +19,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AppComponent,
     HomeComponent,
     AboutComponent,
+    DashboardComponent,
     MenuComponent,
     ApplyComponent,
     LogoComponent,
@@ -50,11 +52,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
       {path: 'privacy', component: PrivacyComponent},
       {path: 'lookbook', component: LookbookComponent},
       {path: 'apply', component: ApplyComponent},
+      {path: 'dashboard', component: DashboardComponent},
       {path: '', redirectTo:'home', pathMatch:'full'},
       {path: '**', component:HomeComponent}
     ])
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
