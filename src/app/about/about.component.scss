@@ -16,6 +16,12 @@
       font-size: 20px;
     }
   }
+
+  p{
+    font-family: helvetica;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
 }
 
 .end-text{
@@ -24,14 +30,21 @@
   top: 60%;
   transform: translate(-50%);
   -webkit-animation: example 2s; /* Safari 4.0 - 8.0 */
-
   animation: example 2s;
+  @include respond-to(phone){
+    top: 55%;
+  }
 
   h1{
     font-family: Reservation;
     @include respond-to(phone){
       font-size: 20px;
     }
+  }
+  p{
+    font-family: helvetica;
+    font-size: 11px;
+    text-transform: uppercase;
   }
 }
 

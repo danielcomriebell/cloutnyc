@@ -1,5 +1,39 @@
 @import '../../styles/mixins';
 
+.coming-soon{
+  position: absolute;
+  // width: 386px;
+  text-transform: uppercase;
+  // height: 400px;
+  width: 100vw;
+  text-align: center;
+  // left: 50%;
+  bottom: 25px;
+  // transform: translate(-50%);
+
+  p{
+    font-family: Reservation;
+    font-size: 20px;
+    // background-color: black;
+    color: black;
+    letter-spacing: 5px;
+    cursor: crosshair;
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: black;
+    transition: all .4s ease-in;
+    &:hover{
+      color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+    @include respond-to(phone){
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+  }
+}
+
+
 h1{
   position: absolute;
   left: 50%;
