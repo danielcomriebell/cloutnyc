@@ -1,8 +1,19 @@
 <!-- <h1 (click) = "showApplyContainer()">apply</h1> -->
-
-<div class="coming-soon">
-  <p>Application is closed</p>
+<h1 (click) = "doSomething()">{{hello}}</h1>
+<!-- THIS IS : {{userDetails}} -->
+<div class="coming-soon" *ngIf="!authService.currentUser">
+  <p (click) = "signInWithGoogle()">apply</p>
   <!-- <p> Check back later </p> -->
+</div>
+
+<div class="coming-soon" *ngIf="authService.currentUser">
+  <p [routerLink]="['/dashboard']">Dashboard</p>
+
+  <!-- <p (click)="authService.logout()">Logout</p> -->
+  <!-- {{authService.currentUserId}}
+  {{authService.currentUserDisplayName}}
+  {{authService.currentUser}} -->
+
 </div>
 
 <div class="apply-container" *ngIf="showApply">
@@ -10,13 +21,30 @@
     <h1 (click) = "showApplyContainer()">X</h1>
   </div>
 
-  <div class="apply-form-fields">
+  <div class="apply-form-fields" *ngIf="!authService.currentUser; else alreadyLoggedIn">
     <!-- <input type="email" placeholder="EMAIL" name="" value="">
     <input type="password" placeholder="PASSWORD" name="" value="">
     <button type="button" name="button"> SUBMIT </button> -->
-    <button (click)="signInWithFacebook()" type="button" name="button"> Apply with Facebook </button>
-    <button (click)="signInWithGoogle()" type="button" name="button"> Login with Google </button>
+    <!-- <button (click)="signInWithFacebook()" type="button" name="button"> Apply with Facebook </button> -->
+    <!-- <button (click)="signInWithGoogle()" type="button" name="button"> Login with Google </button> -->
     <!-- <button type="button" name="button"> Login with Twitter </button> -->
     <!-- <button type="button" name="button"> Login with Github </button> -->
   </div>
+
+  <!-- <div class="already-signedin-message" *ngIf="authService.currentUser">
+    <p>You are already signed in charles</p>
+  </div> -->
 </div>
+
+<!-- {{authService.currentUserId}} -->
+
+<!-- <div class="something">
+  <p (click) ="authService.logout()">Show datalist</p>
+</div> -->
+
+
+<!-- <ng-template #alreadyLoggedIn>
+  <p class="text-success">
+    Already logged in!
+  </p>
+</ng-template> -->

@@ -1,0 +1,9 @@
+{{authService.currentUserId}}
+{{authService.currentUserDisplayName}}
+<div class="coming-soon2" *ngIf="authService.currentUser">
+  <p (click)="authService.logout()">Logout</p>
+  <!-- {{authService.currentUserId}}
+  {{authService.currentUserDisplayName}}
+  {{authService.currentUser}} -->
+
+</div>

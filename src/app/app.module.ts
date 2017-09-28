@@ -20,7 +20,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './services/auth.service';
+import { CoreGuard } from './core.guard';
+
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ItemsListComponent } from './items/items-list/items-list.component';
+import { ItemDetailComponent } from './items/item-detail/item-detail.component';
+import { ItemFormComponent } from './items/item-form/item-form.component';
 
 
 @NgModule({
@@ -35,6 +40,9 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     PrivacyComponent,
     TermsComponent,
     LookbookComponent,
+    ItemsListComponent,
+    ItemDetailComponent,
+    ItemFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,12 +61,12 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
       {path: 'privacy', component: PrivacyComponent},
       {path: 'lookbook', component: LookbookComponent},
       {path: 'apply', component: ApplyComponent},
-      {path: 'dashboard', component: DashboardComponent},
+      {path: 'dashboard', component: DashboardComponent, canActivate:[CoreGuard]},
       {path: '', redirectTo:'home', pathMatch:'full'},
       {path: '**', component:HomeComponent}
     ])
   ],
-  providers: [AuthService,  {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [AuthService, CoreGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
