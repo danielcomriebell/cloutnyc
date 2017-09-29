@@ -1,17 +1,23 @@
 <!-- {{authService.currentUserId}}
 {{authService.currentUserDisplayName}} -->
 <!-- {{courses}} -->
+<!-- {{updateFlag}} -->
 <div *ngFor="let course of courses" class="data">
  {{course.$key}} - {{course.$value}}
 </div>
 
 
 <div class="input-field">
-  <input type="text" name="" value="" #titleInput>
-  <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add</button>
-  <!-- <div class="" *ngIf="(courses$ | async)?.length==0">
-    <button type="button" name="button">This shouldnt be here</button>
-  </div> -->
+  <!-- <input type="text" name="" value="" #titleInput> -->
+  <!-- <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add</button> -->
+  <div class="" *ngIf="updateFlag == 0">
+      <input type="text" name="" value="" #titleInput>
+      <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add New Instagram Handle</button>
+  </div>
+  <div class="" *ngIf="updateFlag > 0">
+    <input type="text" name="" value="" #titleInput>
+    <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Update Instgram Handle</button>
+  </div>
   <!-- <input *ngIf="courses !== null" type="text" name="" value=""> -->
 </div>
 
