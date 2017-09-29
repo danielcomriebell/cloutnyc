@@ -45,6 +45,10 @@ export class AuthService {
     return this.user;
   }
 
+  get currentUserEmail(): string{
+    return this.authState.email;
+  }
+
   get currentUserId(): string{
     return this.authenticated ? this.authState.uid: '';
   }

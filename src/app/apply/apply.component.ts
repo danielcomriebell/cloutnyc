@@ -55,7 +55,7 @@ export class ApplyComponent implements OnInit {
         this.router.navigate(['dashboard']);
         // this.doSomething();
         // console.log(this.user);
-        alert(this.userName);
+        // alert(this.userName);
       })
     .catch((err) => console.log(err));
   }

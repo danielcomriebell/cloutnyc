@@ -1,5 +1,25 @@
-{{authService.currentUserId}}
-{{authService.currentUserDisplayName}}
+<!-- {{authService.currentUserId}}
+{{authService.currentUserDisplayName}} -->
+<!-- {{courses}} -->
+<div *ngFor="let course of courses" class="data">
+ {{course.$key}} - {{course.$value}}
+</div>
+
+
+<div class="input-field">
+  <input type="text" name="" value="" #titleInput>
+  <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add</button>
+  <!-- <div class="" *ngIf="(courses$ | async)?.length==0">
+    <button type="button" name="button">This shouldnt be here</button>
+  </div> -->
+  <!-- <input *ngIf="courses !== null" type="text" name="" value=""> -->
+</div>
+
+
+<!-- {{courses}} -->
+<!-- <div *ngFor="let course of courses" class="hello"> -->
+  <!-- {{course[0]}} -->
+<!-- </div> -->
 <div class="coming-soon2" *ngIf="authService.currentUser">
   <p (click)="authService.logout()">Logout</p>
   <!-- {{authService.currentUserId}}

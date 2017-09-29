@@ -21,11 +21,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './services/auth.service';
 import { CoreGuard } from './core.guard';
-
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ItemsListComponent } from './items/items-list/items-list.component';
-import { ItemDetailComponent } from './items/item-detail/item-detail.component';
-import { ItemFormComponent } from './items/item-form/item-form.component';
 
 
 @NgModule({
@@ -40,9 +36,6 @@ import { ItemFormComponent } from './items/item-form/item-form.component';
     PrivacyComponent,
     TermsComponent,
     LookbookComponent,
-    ItemsListComponent,
-    ItemDetailComponent,
-    ItemFormComponent,
   ],
   imports: [
     BrowserModule,
