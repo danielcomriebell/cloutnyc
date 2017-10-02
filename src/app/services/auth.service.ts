@@ -49,6 +49,10 @@ export class AuthService {
     return this.authState.email;
   }
 
+  get currentUserInstagram(): string{
+    return this.authState.instagram_handle;
+  }
+
   get currentUserId(): string{
     return this.authenticated ? this.authState.uid: '';
   }

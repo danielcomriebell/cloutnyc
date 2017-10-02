@@ -1,25 +1,17 @@
 @import '../../styles/mixins';
 
-.coming-soon2{
+.logout-button{
   position: absolute;
-  // width: 386px;
   text-transform: uppercase;
-  // height: 400px;
   width: 100vw;
   text-align: center;
-  // left: 50%;
   bottom: 25px;
-  // transform: translate(-50%);
-
   p{
     font-family: Reservation;
     font-size: 20px;
-    // background-color: black;
     color: black;
     letter-spacing: 5px;
     cursor: crosshair;
-    // -webkit-text-stroke-width: 1px;
-    // -webkit-text-stroke-color: black;
     transition: all .4s ease-in;
     &:hover{
       color: white;
@@ -28,18 +20,194 @@
     }
     @include respond-to(phone){
         font-size: 13px;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
+    }
+  }
+}
+
+.input-field{
+  width: 400px;
+  background-color: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 125px;
+  input{
+    width: 400px;
+    height: 28px;
+    outline: 0;
+    margin-top: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 4px;
+    letter-spacing: 1px;
+    -webkit-appearance: none;
+    &:nth-child(4){
+      margin-bottom: 10px;
+    }
+  }
+  button{
+    margin-top: 10px;
+    width: 410px;
+    height: 30px;
+    padding: 4px;
+    -webkit-appearance: none;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    transition: all .4s;
+    cursor: crosshair;
+    // &:nth-child(1){
+    //   margin-bottom: 10px;
+    // }
+    &:disabled{
+      background-color: black;
+      color: white;
+    }
+    &:hover{
+      background-color: black;
+      color: white;
+    }
+  }
+  p{
+    font-family: helvetica;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  @include respond-to(phone){
+    width: 340px;
+    input{
+      width: 100%;
+    }
+    button{
+      width: 350px;
+    }
+  }
+}
+
+.input-field-update{
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125px;
+  input{
+    width: 400px;
+    height: 28px;
+    outline: 0;
+    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 4px;
+    letter-spacing: 1px;
+    -webkit-appearance: none;
+    &:nth-child(4){
+      margin-bottom: 10px;
+    }
+  }
+  button{
+    margin-top: 15px;
+    width: 410px;
+    height: 30px;
+    padding: 4px;
+    -webkit-appearance: none;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    transition: all .4s;
+    cursor: crosshair;
+    // &:nth-child(1){
+    //   margin-bottom: 10px;
+    // }
+    &:hover{
+      background-color: black;
+      color: white;
+    }
+    &:disabled{
+      background-color: black;
+      color: white;
+    }
+  }
+  p{
+    font-family: helvetica;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  @include respond-to(phone){
+    width: 340px;
+    input{
+      width: 100%;
+    }
+    button{
+      width: 350px;
+    }
+  }
+}
+
+.alert{
+  font-size: 11px;
+  font-family: helvetica;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  // margin-top: 10px;
+}
+
+.alert2{
+  font-size: 11px;
+  font-family: helvetica;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  margin-top: 10px;
+}
+
+.user-account{
+  position: relative;
+  width: 400px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50px;
+  h1{
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'helvetica';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 11px;
+    font-family: 'helvetica';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @include respond-to(phone){
+    // right: 20px;
+    h1{
+      text-align: center;
+    }
+    p{
+      text-align: center;
     }
   }
 }
 
 
-.data{
-  position: relative;
-  left: 50%;
-}
+// .application{
+//   width: 500px;
+//   overflow: hidden;
+//   position: relative;
+//   left: 50%;
+// }
 
-.input-field{
-  position: relative;
-  left: 50%;
-}
+// .input-field{
+//   position: relative;
+//   left: 50%;
+// }

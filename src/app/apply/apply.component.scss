@@ -28,7 +28,7 @@
     }
     @include respond-to(phone){
         font-size: 13px;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
     }
   }
 }

@@ -1,35 +1,77 @@
-<!-- {{authService.currentUserId}}
-{{authService.currentUserDisplayName}} -->
-<!-- {{courses}} -->
-<!-- {{updateFlag}} -->
-<div *ngFor="let course of courses" class="data">
- {{course.$key}} - {{course.$value}}
+<!-- This is the User Id handle: {{authService.currentUserInstagram}} -->
+
+
+
+<!-- <div *ngFor="let course of courses" class="user-account">
+  <h1>{{course.$key}}</h1>
+  <p>{{course.$value}}</p>
+</div> -->
+
+<!-- <div *ngFor="let course of courses" class="application">
+  {{course.$key}} - {{course.$value}}
+</div> -->
+
+
+<!-- <div class="input-field">
+  <div class="initial-field" *ngIf="updateFlag == 0"> -->
+      <!-- <p> Enter in your instagram handle to complete your application.</p>
+      <p> You must be following @cloutnyc. </p>
+      <p> Your account must be off private. </p> -->
+      <!-- <div *ngIf="name.errors.required">
+        <p>Name is required.</p>
+      </div> -->
+
+      <!-- <input type="text" name="instagram" placeholder="Instagram Handle" value="" #titleInput required>
+      <button type="submit" (click)='pushData(titleInput.value)' name="button">Submit</button> -->
+      <!-- <div *ngIf="name.errors.required">
+        <p>Name is required.</p>
+      </div> -->
+  <!-- </div>
+</div> -->
+
+<div *ngIf="updateFlag == 0; else forminfo" class="input-field">
+  <form [formGroup]="rForm" (ngSubmit)="pushData(rForm.value)">
+    <div class="initial-field">
+      <p> Enter in your instagram handle to complete your application.</p>
+      <p> You must be following @cloutnyc. </p>
+      <p> Your account must be off private. </p>
+      <input type="text" formControlName="instagram_handle">
+      <div class="alert" *ngIf="!rForm.controls['instagram_handle'].valid && rForm.controls['instagram_handle'].touched">{{ titleAlert }}</div>
+      <button type="submit" class="button" value="" [disabled]="!rForm.valid">Submit</button>
+    </div>
+  </form>
 </div>
 
-
-<div class="input-field">
-  <!-- <input type="text" name="" value="" #titleInput> -->
-  <!-- <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add</button> -->
-  <div class="" *ngIf="updateFlag == 0">
-      <input type="text" name="" value="" #titleInput>
-      <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Add New Instagram Handle</button>
+<ng-template #forminfo>
+  <div *ngFor="let course of courses" class="user-account">
+    <h1>{{course.$key}}</h1>
+    <p>{{course.$value}}</p>
   </div>
-  <div class="" *ngIf="updateFlag > 0">
+</ng-template>
+
+<!-- <div *ngIf="name.errors.required">
+  Name is required.
+</div> -->
+
+<div *ngIf="updateFlag > 0" class="input-field-update">
+  <form [formGroup]="rForm" (ngSubmit)="pushData(rForm.value)">
+    <div class="update-field">
+      <p> Update your instagram handle.</p>
+      <input type="text" formControlName="instagram_handle">
+      <div class="alert2" *ngIf="!rForm.controls['instagram_handle'].valid && rForm.controls['instagram_handle'].touched">{{ titleAlert }}</div>
+      <button type="submit" class="button" value="" [disabled]="!rForm.valid">Update Instagram Handle</button>
+    </div>
+  </form>
+</div>
+
+<!-- <div class="input-field-update">
+  <div class="update-field" *ngIf="updateFlag > 0">
     <input type="text" name="" value="" #titleInput>
-    <button type="submit" (click)='pushData(authService.currentUserDisplayName, authService.currentUserId, titleInput.value)' name="button">Update Instgram Handle</button>
+    <button type="submit" (click)='pushData(titleInput.value)' name="button">Update Instagram Handle</button>
   </div>
-  <!-- <input *ngIf="courses !== null" type="text" name="" value=""> -->
-</div>
+</div> -->
 
 
-<!-- {{courses}} -->
-<!-- <div *ngFor="let course of courses" class="hello"> -->
-  <!-- {{course[0]}} -->
-<!-- </div> -->
-<div class="coming-soon2" *ngIf="authService.currentUser">
+<div class="logout-button" *ngIf="authService.currentUser">
   <p (click)="authService.logout()">Logout</p>
-  <!-- {{authService.currentUserId}}
-  {{authService.currentUserDisplayName}}
-  {{authService.currentUser}} -->
-
 </div>
