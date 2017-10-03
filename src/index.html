@@ -13,10 +13,111 @@
     gtag('js', new Date());
     gtag('config', 'UA-107302610-1');
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root><app-loader></app-loader></app-root>
+  <app-root>
+  <style>
+  app-root {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    z-index: 1500;
+    background-color: rgba(0,0,0, 1);
+  }
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-loader {
+      position: fixed;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      opacity: 1;
+      padding: 0;
+      margin: 0;
+      z-index: 1500;
+      background-color: rgba(0,0,0, 1);
+      /*transition: opacity ease 400ms;
+      -webkit-transition: opacity ease 400ms;
+      -o-transition: opacity ease 400ms;
+      -ms-transition: opacity ease 400ms;
+      -moz-transition: opacity ease 400ms;*/
+  }
+
+  .page-loader .loading-p {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top:50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    border:  solid 2px transparent;
+    border-top-color:  #FFF;
+    border-left-color: #FFF;
+    border-radius: 50%;
+    -webkit-animation: loading-bar-spinner 400ms linear infinite;
+    -moz-animation:    loading-bar-spinner 400ms linear infinite;
+    -ms-animation:     loading-bar-spinner 400ms linear infinite;
+    -o-animation:      loading-bar-spinner 400ms linear infinite;
+    animation:         loading-bar-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes loading-bar-spinner {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes loading-bar-spinner {
+  0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes loading-bar-spinner {
+  0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes loading-bar-spinner {
+  0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes loading-bar-fade{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes loading-bar-fade{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes loading-bar-fade{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-ms-keyframes loading-bar-fade{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes loading-bar-fade {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+  </style>
+
+<div class="page-loader">
+  <p class="loading-p"></p>
+</div>
+</app-root>
 </body>
 </html>

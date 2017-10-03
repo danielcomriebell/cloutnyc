@@ -54,7 +54,7 @@
 </div> -->
 
 <div *ngIf="updateFlag > 0" class="input-field-update">
-  <form [formGroup]="rForm" (ngSubmit)="pushData(rForm.value)">
+  <form [formGroup]="rForm" (ngSubmit)="updateData(rForm.value)">
     <div class="update-field">
       <p> Update your instagram handle.</p>
       <input type="text" formControlName="instagram_handle">

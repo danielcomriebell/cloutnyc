@@ -42,6 +42,7 @@
     padding: 4px;
     letter-spacing: 1px;
     -webkit-appearance: none;
+    border-radius: 0;
     &:nth-child(4){
       margin-bottom: 10px;
     }
@@ -80,6 +81,9 @@
 
   @include respond-to(phone){
     width: 340px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     input{
       width: 100%;
     }
@@ -104,6 +108,7 @@
     padding: 4px;
     letter-spacing: 1px;
     -webkit-appearance: none;
+    border-radius: 0;
     &:nth-child(4){
       margin-bottom: 10px;
     }
@@ -141,6 +146,7 @@
   }
   @include respond-to(phone){
     width: 340px;
+    bottom: 100px;
     input{
       width: 100%;
     }
@@ -189,12 +195,16 @@
   }
 
   @include respond-to(phone){
+    width: 350px;
+    top: 10px;
     // right: 20px;
     h1{
-      text-align: center;
+      text-align: right;
+      font-size: 11px;
     }
     p{
-      text-align: center;
+      text-align: right;
+      font-size: 11px;
     }
   }
 }

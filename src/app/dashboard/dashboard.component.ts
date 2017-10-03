@@ -33,6 +33,12 @@ export class DashboardComponent implements OnInit {
     this.db.object(`/users/${this.authService.currentUserId}`).update({name: this.authService.currentUserDisplayName});
     this.db.object(`/users/${this.authService.currentUserId}`).update({email: this.authService.currentUserEmail});
     this.db.object(`/users/${this.authService.currentUserId}`).update({instagram_handle: this.instagram_handle});
+    this.db.object(`/users/${this.authService.currentUserId}`).update({status: "under review"});
+  }
+
+  updateData(post){
+    this.instagram_handle = post.instagram_handle;
+    this.db.object(`/users/${this.authService.currentUserId}`).update({instagram_handle: this.instagram_handle});
   }
 
   // addPost(post){
